@@ -1,0 +1,88 @@
+html {
+
+}
+body {
+    background-color: black;
+    color: greenyellow;
+    text-align: center;
+}
+/*a {
+    color: blueviolet;
+}*/
+a{
+    color: chartreuse;
+}
+a:visited{
+    color: lime;
+}
+h4 {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.text,header {
+    width: 30vw;
+    margin-left: auto;
+    margin-right: auto;
+    color: goldenrod;
+    /*padding-left: -10px;
+    padding-right: -10px;*/
+}
+.header {
+    /*font-size: xx-large;*/
+    border-style: none dashed solid dashed;
+    border-color: gold;
+    border-width: 2px;
+    padding-bottom: 5px;
+    margin: 20px auto 10px auto;
+    width: 30vw;
+}
+
+.text {
+    /*border-style: none solid none solid;*/
+    border-width: 2px;
+    border-color: gold;
+}
+
+.list {
+    text-align: left;
+    width: 30vw;
+    margin-right: auto;
+    margin-left: auto;
+    color: greenyellow;
+}
+.list ul {
+    margin-top: -0px;
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    columns: 2;
+}
+
+.list li {
+    padding-left: 2em;
+    text-indent: -1em;
+    color: limegreen;
+    text-align: left;
+
+}
+
+.list li:before {
+    content: "-";
+    padding-right: 5px;
+}
+
+.list a{
+    color: chartreuse;
+}
+.list a:visited{
+    color: lime;
+}
+
+.footer {
+    border-style: solid dashed none dashed;
+    border-color: gold;
+    border-width: 2px;
+    width: 30vw;
+    margin: auto auto 10px auto;
+}

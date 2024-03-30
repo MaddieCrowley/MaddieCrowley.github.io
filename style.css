@@ -83,10 +83,10 @@ h4 {
     color: lime;
 }
 
-img {
-    /* width: 25vw; */
+/*img {
+    !* width: 25vw; *!
     width: 25%;
-}
+}*/
 
 .footer {
     border-style: solid dashed none dashed;

@@ -15,6 +15,9 @@ a{
 a:visited{
     color: lime;
 }
+h1 {
+    font-size: 2vw;
+}
 h4 {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -42,6 +45,7 @@ h4 {
     /*border-style: none solid none solid;*/
     border-width: 2px;
     border-color: gold;
+    /*font-size: .75vw;*/
 }
 
 .list {
@@ -77,6 +81,11 @@ h4 {
 }
 .list a:visited{
     color: lime;
+}
+
+img {
+    /* width: 25vw; */
+    width: 25%;
 }
 
 .footer {

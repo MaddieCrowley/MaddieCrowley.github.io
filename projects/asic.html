@@ -8,22 +8,28 @@
     <link rel="stylesheet" href="../style.css">
     </head>
   <body>
-    <h1 class="header">TinyTapeout DDS ASIC</h1>
-    <div id="top"></div>
+    <h1 class="header" id="top">TinyTapeout DDS ASIC</h1>
     <div class="text">
       This project was made in collaboration with <a href="https://github.com/ElectronicsTinkerer">Zach Baldwin</a>.
       <br><br>
       <a href="https://github.com/MaddieCrowley/tt06-DDS-Synthesizer">Github repo for the project</a>
       <br><br>
-      <h2>Overall Design</h2>
-      The design comprises of:
-      <ul>
-        <li>a control interface</li>
-        <li><a href="#Oscillator">2 oscillators</a></li>
-        <li><a href="#Modulator">a modulator</a></li>
-        <li><a href="#Current">an ADSR (WIP)</a></li>
-        <li><a href="#Current">digital filter (WIP)</a></li> .
-      <h2 id="Oscillator">Oscillator</h2>
+      <h4>Overall Design</h4>
+      <div class="list">
+        The design comprises of:
+        <ul>
+          <li><a href="#Interface">an interface</a></li>
+          <li><a href="#Oscillator">2 oscillators</a></li>
+          <li><a href="#Modulator">a modulator</a></li>
+          <li><a href="#Current">an ADSR (WIP)</a></li>
+          <li><a href="#Current">digital filter (WIP)</a></li>
+        </ul>
+      </div>
+      <h4 id="Interface">Interface</h4>
+      This interface was written by Zach, so I can not speak much to its function other than the usage of SPI
+      both control in and wave out.
+      <br><br>
+      <h4 id="Oscillator">Oscillator</h4>
       Overall, the project comprised of creating a direct digital synthesis (DDS) algorithm,
       with a maximum frequency of roughly 20kHz at a resolution of 1/3 Hz, enabling pretty much every musical
       note to be played. The algorithm follows a basic DDS routine, having a phase accumulator, and different
@@ -31,21 +37,23 @@
       done using a quarte-sine look-up table (LUT), which is generated with MATLAB. The other are generated
       via bit-tricks with the phase accumulator.
       <br><br>
-      <h2 id="Modulator">Modulator</h2>
-      The modulator modulates oscillator one with modulator two. The modulation routines are:
-      <ul>
-        <li>Amplitude via a radix-2 sequential multiplier</li>
-        <li>Addition without carry-out</li>
-        <li>Subtration with carry-out</li>
-        <li>Addition with carry-out</li>
-        <li>Magic Something (see Verilog code)</li>
-        <li>Oscillator 1 only</li>
-        <li>Oscillator 2 only</li>
-        <li>Bitwise XOR</li>
-        <li>Bitwise AND</li>
-      </ul>
+      <h4 id="Modulator">Modulator</h4>
+      <div class="list">
+        The modulator modulates oscillator one with oscillator two. The modulation routines are:
+        <ul>
+          <li>Amplitude via a radix-2 sequential multiplier</li>
+          <li>Addition without carry-out</li>
+          <li>Subtration with carry-out</li>
+          <li>Addition with carry-out</li>
+          <li>Magic Something (see Verilog code)</li>
+          <li>Oscillator 1 only</li>
+          <li>Oscillator 2 only</li>
+          <li>Bitwise XOR</li>
+          <li>Bitwise AND</li>
+        </ul>
+      </div>
       <br><br>
-      <h2 id="Current">Current Portions</h2>
+      <h4 id="Current">Current Portions</h4>
       The current portion of the project is design and implementation of an ADSR as well as a variable low pass
       filter.
     </div>
